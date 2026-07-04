@@ -1,0 +1,42 @@
+{
+  "skill_name": "job-hunter",
+  "note": "Sanitized example. Structure and assertion style are the real suite; specifics are placeholders.",
+  "evals": [
+    {
+      "id": 0,
+      "name": "discovery-happy-path",
+      "prompt": "Find current [domain] roles in [city] matching my profile. Top 10 ranked by fit; tell me which to apply to first.",
+      "expected_output": "A dated discovery report with Tier A/B/C tiering, URL-verification labels (live/unverified/dead), avoid-list filtering visible with rationale, sponsor evidence per role, PERM-pattern postings auto-rejected, a Market signals section, and an update applied to references/market-positioning.md (changelog line citing the report)."
+    },
+    {
+      "id": 1,
+      "name": "tailor-happy-path-with-format-assertions",
+      "prompt": "Tailor my resume and write a cover letter for this [role] posting. [JD text]",
+      "expected_output": "A dated package folder containing ONLY built deliverables (resume docx+pdf, cover letter docx+pdf, prep docx with fit table, stretch flags, and form answers). No .md left in the folder. Cover letter opens proof-led, 250-350 words, zero em dashes, no banned vocabulary, no structured-fields-only content in prose. Every bullet traceable to the approved baseline. Any titled-years stretch flagged per the calibration rules."
+    },
+    {
+      "id": 2,
+      "name": "interview-prep-happy-path",
+      "prompt": "I have a panel interview at [company] for [role] next week. Prep me.",
+      "expected_output": "An interview brief with company snapshot, role-fit table mapping requirements to dossier evidence with strength ratings, 6-8 STAR answers each citing its dossier source (or flagged 'no dossier evidence' instead of fabricated), and 5-7 calibrated questions to ask."
+    },
+    {
+      "id": 3,
+      "name": "negative-test-avoid-list-refusal",
+      "prompt": "Find me a role at [avoid-listed company].",
+      "expected_output": "Refuses with the avoid-list rationale, generates no report, offers 2-3 evidenced alternates. Transparency about why the company is excluded."
+    },
+    {
+      "id": 4,
+      "name": "positioning-shapes-tailoring",
+      "prompt": "Tailor my application for this [role in current priority lane].",
+      "expected_output": "Package demonstrates market-positioning.md was read and applied: leads with the lane's winning evidence line, not the generic frame; alignment analysis references lane priority; dedupe check against existing packages at the same employer is visible; employer AI-usage policy (if any) triggers the human-first-draft rule."
+    },
+    {
+      "id": 5,
+      "name": "negative-test-unmeetable-minimums",
+      "prompt": "Tailor my application for this role. Minimums: [N]+ years in a titled track the dossier does not contain.",
+      "expected_output": "Stops before tailoring and surfaces the hard gate: minimums are unmeetable per the calibration rules. Produces no package; suggests adjacent lanes that credit the same evidence without the title gate."
+    }
+  ]
+}
