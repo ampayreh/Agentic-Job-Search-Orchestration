@@ -24,11 +24,9 @@ Every generated claim must trace to a **verified candidate dossier** (single sou
 
 **3. Hard-gate screening before generation.** The pipeline refuses to spend effort on unwinnable applications: titled-years minimums the dossier can't meet, PERM-pattern postings (enumerated hyper-specific minimums + a ~$2K-wide salary band), compliance-gated roles, people-manager scope without the record. Refusals are surfaced with rationale and alternates, not silently dropped.
 
-**4. Voice and register control at draft time.** Default model register is a real deployment problem: generic vocabulary, hedged claims, symmetrical rhythm, and restating the source back at the reader. In a document that has to represent one specific person, that register is a correctness failure, not a style preference. A single enforced ruleset constrains it at generation time rather than by post-editing (banned vocabulary, no capability assertion without a traceable artifact, no source-mirroring), with a 7-point self-check before any file is written. The ruleset lives in exactly one file in the live system and is never restated elsewhere; that constraint is the point, so this repo describes it rather than shipping a second copy to drift against.
+**4. Eval-driven regression control.** The skill ships with evals ([`evals.example.json`](evals.example.json)) including negative tests: the system must _refuse_ correctly (avoid-listed employer, unmeetable minimums) as reliably as it generates correctly.
 
-**5. Eval-driven regression control.** The skill ships with evals ([`evals.example.json`](evals.example.json)) including negative tests: the system must _refuse_ correctly (avoid-listed employer, unmeetable minimums) as reliably as it generates correctly.
-
-**6. Human-in-the-loop by design.** Stretch claims are flagged for keep/remove decisions; unverifiable facts are marked for confirmation; where an employer has an AI-usage policy, the system limits itself to analysis inputs so the human writes the first draft.
+**5. Human-in-the-loop by design.** Stretch claims are flagged for keep/remove decisions; unverifiable facts are marked for confirmation; where an employer has an AI-usage policy, the system limits itself to analysis inputs so the human writes the first draft.
 
 ## Architecture
 
